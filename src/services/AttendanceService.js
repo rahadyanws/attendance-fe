@@ -17,7 +17,7 @@ export default class AttendanceService {
         },      
       });
       console.log('response.data' + JSON.stringify(response.data))
-      return response.data;
+      return response.data.data;
     } catch (error) {
       console.error('Error fetching atte ndance:', error);
       throw error;
@@ -29,7 +29,7 @@ export default class AttendanceService {
       const response = await axios.get(`${API_URL}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      return response.data;
+      return response.data.data;
     } catch (error) {
       console.error('Error fetching attendance:', error);
       throw error;
