@@ -11,7 +11,7 @@ class AuthService {
         password,
       });
       
-      return response.data; // Asumsikan respons berisi { token: '...' }
+      return response.data.data; // Asumsikan respons berisi { token: '...' }
     } catch (error) {
       throw error.response?.data || error;
     }
