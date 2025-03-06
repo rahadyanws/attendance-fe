@@ -10,6 +10,9 @@
             <router-link to="/addattendance" class="attendance-nav-link">Add Attendance</router-link>
           </li>
           <li class="attendance-nav-item">
+            <router-link to="/attendance" class="attendance-nav-link">Attendance</router-link>
+          </li>
+          <li class="attendance-nav-item">
             <button class="attendance-nav-button" @click="handleLogout">Logout</button>
           </li>
         </ul>

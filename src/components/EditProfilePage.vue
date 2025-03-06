@@ -51,20 +51,20 @@ export default {
     async created() {
         try {
             const response = await UserService.getProfile();
-            this.profile = response[0];
+            this.profile = response;
         } catch (err) {
-            this.error = err.message || 'Gagal mengambil profil.';
+            this.error = err.message || 'Unable to fetch profile.';
         }
     },
     methods: {
         async updateProfile() {
             try {
                 await UserService.updateProfile(this.profile, this.newPassword);
-                this.success = 'Profil berhasil diperbarui.';
+                this.success = 'Profile successfully updated.';
                 this.error = null;
                 this.newPassword = ''; // Reset password field
             } catch (err) {
-                this.error = err.message || 'Gagal memperbarui profil.';
+                this.error = err.message || 'Unable to update profile.';
                 this.success = null;
             }
         },

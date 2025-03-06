@@ -12,7 +12,8 @@ class UserService {
             const response = await axios.get(`${API_URL}/${decodedToken.userId}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
-            return response.data;
+            console.log(JSON.stringify(response.data.data))
+            return response.data.data;
         } catch (error) {
             throw error.response?.data || error;
         }

@@ -3,6 +3,7 @@ import LoginPage from '../components/LoginPage.vue';
 import DashboardPage from '../components/DashboardPage.vue'; // Buat komponen Dashboard
 import EditProfilePage from '@/components/EditProfilePage.vue';
 import AddAttendancePage from '@/components/AddAttendancePage.vue';
+import AttendancesPage from '@/components/AttendancesPage.vue';
 
 const routes = [
   { path: '/login', component: LoginPage },
@@ -10,6 +11,7 @@ const routes = [
   { path: '/', redirect: '/login' },
   { path: '/editprofile', component: EditProfilePage, meta: { requiresAuth: true } },
   { path: '/addattendance', component: AddAttendancePage, meta: { requiresAuth: true } },
+  { path: '/attendance', component: AttendancesPage, meta: { requiresAuth: true } },
 ];
 
 const router = createRouter({
